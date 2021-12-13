@@ -1,0 +1,46 @@
+h1 {
+    text-align: center;
+}
+
+.redbg {
+    background-color:red;
+  }
+  
+  .bluebg {
+    background-color:blue;
+    padding: 10px;
+  }
+  
+  .yellowbg {
+    background-color:yellow;
+  }
+
+  .greenbg {
+      background-color:green;
+  }
+
+  .purplebg {
+      background-color:purple;
+  }
+
+  .SideColItem {
+      margin: 10px;
+  }
+
+  .SideColItemLabel {
+      text-align: right;
+  }
+
+  .SideColItemValue {
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.table td {
+  text-align: center;
+}
+
+.reptable {
+  display: inline;
+  width: 14.28%;
+}
