@@ -35,51 +35,96 @@ $result = mysqli_query($conn, $sql);
 $rep = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 // Prints out the array
-print_r($rep);
+//print_r($rep);
 
 /*// Free results from memory
 mysqli_free_results($result);
 
 // Close database connection
 mysqli_close($conn);*/
+?>
 
+<div class='container'>
 
-
+<?php
 echo "<h1>" . "(" . $rep[0]['RepID'] . ")" . " " . $rep[0]['FirstName'] . " " . $rep[0]['LastName'] . "</h1>";
 ?>
 
-<!-- REP INFO STARTS HERE -->
-<div class='reptable'>Registered/NRF</div>
-<div class='reptable'>Office</div>
-<div class='reptable'>W2</div>
-<div class='reptable'>1099</div>
-<div class='reptable'>Gross Commission</div>
-<div class='reptable'>Disclosure</div>
-<div class='reptable'>Role</div>
-<!--<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th scope='col'>Registered/NRF</th>
-            <th scope='col'>Office</th>
-            <th scope='col'>W2</th>
-            <th scope='col'>1099</th>
-            <th scope='col'>Gross Commission</th>
-            <th scope='col'>Disclosure</th>
-            <th scope='col'>Role</th>
-        <tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><?php echo $rep[0]['RegisteredNRF']?></td>
-            <td><?php echo $rep[0]['OfficeID']?></td>
-            <td><?php echo $rep[0]['W2']?></td>
-            <td><?php echo $rep[0]['1099']?></td>
-            <td><?php echo $rep[0]['GrossComm']?></td>
-            <td><?php echo $rep[0]['Disclosure']?></td>
-            <td><?php echo $rep[0]['RoleID']?></td>
-        </tr>
-    </tbody>
-</table>-->
+</div>
+
+<div class="container">
+    <div class="row">
+
+            <!-- REP INFO STARTS HERE -->
+            <table class="table-responsive col-sm-2">
+                <thead>
+                    <tr>
+                        <th scope='col'>Registered/NRF:</th>
+                        <td><?php echo $rep[0]['RegisteredNRF']?></td>
+                    </tr>
+                    <tr>
+                        <th scope='col'>Office:</th>
+                        <td><?php echo $rep[0]['OfficeID']?></td>
+                    </tr>
+                    <tr>
+                        <th scope='col'>W2:</th>
+                        <td><?php echo $rep[0]['W2']?></td>
+                    </tr>
+                    <tr>
+                        <th scope='col'>1099:</th>
+                        <td><?php echo $rep[0]['1099']?></td>
+                    </tr>
+                    <tr>
+                        <th scope='col'>Gross Commission:</th>
+                        <td><?php echo $rep[0]['GrossComm']?></td>
+                    </tr>
+                    <tr>
+                        <th scope='col'>Disclosure:</th>
+                        <td><?php echo $rep[0]['Disclosure']?></td>
+                    </tr>
+                    <tr>
+                        <th scope='col'>Role:</th>
+                        <td><?php echo $rep[0]['RoleID']?></td>
+                    <tr>
+                </thead>
+            </table>
+
+
+            <table class="table-responsive col-sm-10">
+                    <thead>
+                        <tr>
+                            <th scope='col'>Registered/NRF:</th>
+                            <td><?php echo $rep[0]['RegisteredNRF']?></td>
+                        </tr>
+                        <tr>
+                            <th scope='col'>Office:</th>
+                            <td><?php echo $rep[0]['OfficeID']?></td>
+                        </tr>
+                        <tr>
+                            <th scope='col'>W2:</th>
+                            <td><?php echo $rep[0]['W2']?></td>
+                        </tr>
+                        <tr>
+                            <th scope='col'>1099:</th>
+                            <td><?php echo $rep[0]['1099']?></td>
+                        </tr>
+                        <tr>
+                            <th scope='col'>Gross Commission:</th>
+                            <td><?php echo $rep[0]['GrossComm']?></td>
+                        </tr>
+                        <tr>
+                            <th scope='col'>Disclosure:</th>
+                            <td><?php echo $rep[0]['Disclosure']?></td>
+                        </tr>
+                        <tr>
+                            <th scope='col'>Role:</th>
+                            <td><?php echo $rep[0]['RoleID']?></td>
+                        <tr>
+                    </thead>
+                </table>
+
+    </div>
+</div>
 <div class="container">
     <!-- CHARGEBACK CATEGORIES TABS START -->
     <ul class="nav nav-tabs" id="myTab" role="tablist">
